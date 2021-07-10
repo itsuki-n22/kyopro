@@ -17,13 +17,13 @@ Benchmark.bm do |x|
       if n == target_size - 1
         valid_blackets[n - 1].each do |blacket|
           answer <<  blacket + "()"
-          answer <<  "(" + blacket + ""
+          answer <<  "(" + blacket + ")"
         end
       else
         valid_blackets[n] = []
         valid_blackets[n - 1].each do |blacket|
           valid_blackets[n] <<  blacket + "()"
-          valid_blackets[n] <<  "(" + blacket + ""
+          valid_blackets[n] <<  "(" + blacket + ")"
         end
       end
     end
